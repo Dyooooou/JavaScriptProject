@@ -1,0 +1,2 @@
+Snake is a game in which a snake needs to explore the environment and catch the fruit or food without hitting any obstacle or itself. 
+Every time the snake catches a fruit or food, its size increases or become longer.
