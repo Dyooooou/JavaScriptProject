@@ -1,0 +1,1 @@
+This is the place where is store game project using javascript and its collaegue.
