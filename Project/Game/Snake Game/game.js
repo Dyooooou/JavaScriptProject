@@ -153,7 +153,14 @@ var Snake = (function (){
             player.x += velocity.x;
             player.y += velocity.y;
 
-            
+            if (velocity.x == 0 && velocity.y == -1)
+                lastAction = ActionEnum.up;
+            if (velocity.x == 0 && velocity.y == 1)
+                lastAction = ActionEnum.down;
+            if (velocity.x == -1 && velocity.y == 0)
+                lastAction = ActionEnum.left;
+            if (velocity.x == 1 && velocity.y == 0)
+                lastAction = ActionEnum.right;
         }
     }
 })
