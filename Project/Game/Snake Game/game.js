@@ -148,6 +148,8 @@ var Snake = (function (){
                 ctx.fillRect(canv.width-gridSize+1, 0, gridSize, canv.height);
                 ctx.fillRect(0, canv.height-gridSize+1, canv.width, gridSize);
             }
+
+            var stopped = velocity.x == 0 && velocity.y == 0;
         }
     }
 })
