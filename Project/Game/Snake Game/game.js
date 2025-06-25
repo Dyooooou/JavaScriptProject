@@ -115,12 +115,12 @@ var Snake = (function (){
 
         log: function(){
             console.log('==========================');
-            console.log('x:' + player.x + 'y:" + player.y);
+            console.log('x:' + player.x + 'y:' + player.y);
             console.log('tail:' + tail + 'trail.length:' + trail.length);
         },
 
         loop: function(){
-            
+
         }
     }
 })
