@@ -150,6 +150,10 @@ var Snake = (function (){
             }
 
             var stopped = velocity.x == 0 && velocity.y == 0;
+            player.x += velocity.x;
+            player.y += velocity.y;
+
+            
         }
     }
 })
