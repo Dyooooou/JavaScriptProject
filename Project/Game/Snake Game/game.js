@@ -10,7 +10,7 @@ var Snake = (function (){
     const INITIAL_PLAYER = {
         x: Math.floor(tileCount / 2),
         y: Math.floor(tileCount / 2)
-    };
+    }; 
 
     var velocity = {
         x:0,
@@ -36,5 +36,91 @@ var Snake = (function (){
     var points = 0;
     var pointsMax = 0;
 
-    
+    var ActionEnum = {
+        'none': 0,
+        "up": 1, 
+        "down": 2,
+        "left": 3,
+        "right": 4   
+    }; 
+    var lastAction = ActionEnum.none;
+
+    function setup(){
+        canv = document.getElementById('gc');
+        ctx = canv.getContext('2d');
+
+        game.reset();
+    }
+
+    var game = {
+        reset: function (){
+            ctx.fllStyle = 'grey';
+            ctx.fillRect(0, 0, canv.width, canv.height);
+
+            tail = INITIAL_TAIL;
+            points = 0;
+            velocity.x = 0;
+            velocity.y = 0;
+            player.x = INITIAL_PLAYER.x;
+            player.y = INITIAL_PLAYER.y;
+            // this.RandomFruit()
+            reward = -1;
+
+            lastAction = ActionEnum.none;
+            trail = [];
+            trail.push({
+                x: player.x,
+                y: player.y
+
+            });
+        }, 
+
+        action:{
+            up: function (){
+                if (lastAction != ActionEnum.down){
+                    velocity.x = 0;
+                    velocity.y = -1;
+                }
+            }, 
+            down: function (){
+                if (lastAction != ActionEnum.up){
+                    velocity.x = 0;
+                    velocity.y = 1;
+                }
+            }, 
+            left: function (){
+                if (lastAction != ActionEnum.right){
+                    velocity.x = -1;
+                    velocity.y = 0;
+                }
+            },
+            right: function (){
+                if (lastAction != ActionEnum.left){
+                    velocity.x = 1;
+                    velocity.y = 0;
+                }
+            }
+        },
+
+        RandomFruit: function(){
+            if(walls){
+                fruit.x = 1+Math.floor(Math.random() * (tileCount-2));
+                fruit.y = 1+Math.floor(Math.random() * (tileCount-2));
+            }
+            else {
+                fruit.x = 1+Math.floor(Math.random() * (tileCount));
+                fruit.y = 1+Math.floor(Math.random() * (tileCount));
+            }
+        },
+
+        log: function(){
+            console.log('==========================');
+            console.log('x:' + player.x + 'y:" + player.y);
+            console.log('tail:' + tail + 'trail.length:' + trail.length);
+        },
+
+        loop: function(){
+            
+        }
+    }
 })
