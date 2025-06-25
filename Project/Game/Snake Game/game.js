@@ -132,6 +132,22 @@ var Snake = (function (){
                 if (player.y >= tileCount)
                     player.y = 0;
             }
+            function HitWall(){
+                if (player.x < 1)
+                    game.reset();
+                if (player.x > tileCount-2)
+                    game.reset();
+                if (player.y < 1)
+                    game.reset();
+                if (player.y > tileCount-2)
+                    game.reset();
+
+                ctx.fillStyle = 'grey';
+                ctx.fillRect(0, 0, gridSize-1, canv.height);
+                ctx.fillRect(0, 0, canv.width, gridSize-1);
+                ctx.fillRect(canv.width-gridSize+1, 0, gridSize, canv.height);
+                ctx.fillRect(0, canv.height-gridSize+1, canv.width, gridSize);
+            }
         }
     }
 })
