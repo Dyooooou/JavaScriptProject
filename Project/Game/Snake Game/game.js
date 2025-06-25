@@ -120,7 +120,18 @@ var Snake = (function (){
         },
 
         loop: function(){
+            reward = -1;
 
+            function DontHitWall(){
+                if (player.x < 0) 
+                    player.x = tileCount - 1;
+                if (player.x >= tileCount)
+                    player.c = 0;
+                if (player.y < 0)
+                    player.y = tileCount -1;
+                if (player.y >= tileCount)
+                    player.y = 0;
+            }
         }
     }
 })
