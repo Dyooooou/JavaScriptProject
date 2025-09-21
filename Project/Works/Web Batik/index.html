@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Batik Wikarsa</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo" data-translate="logo">Batik Wikarsa</div>
+            <ul class="nav-links">
+                <li><a href="#home" data-translate="nav-home">Home</a></li>
+                <li><a href="#about" data-translate="nav-about">About</a></li>
+                <li><a href="#products" data-translate="nav-products">Products</a></li>
+                <li><a href="#contact" data-translate="nav-contact">Contact</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button onclick="switchLanguage('en')" class="active">EN</button>
+                <button onclick="switchLanguage('id')">ID</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-translate="hero-title">Authentic Indonesian Batik</h1>
+                    <p data-translate="hero-subtitle">Discover the beauty of traditional handcrafted batik art, passed down through generations</p>
+                    <a href="#products" class="cta-button" data-translate="hero-cta">Explore Collection</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text fade-in">
+                        <h2 data-translate="about-title">Our Heritage</h2>
+                        <p data-translate="about-text">
+                            For over two decades, our family has been creating authentic Indonesian batik using traditional techniques passed down through generations. Each piece tells a story of Indonesian culture, crafted with love and dedication by skilled artisans in our workshop.
+                        </p>
+                        <p data-translate="about-text2">
+                            We are proud to share this beautiful art form with the world, bringing you genuine batik that represents the rich cultural heritage of Indonesia.
+                        </p>
+                    </div>
+                    <div class="about-image fade-in"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products" id="products">
+            <div class="container">
+                <h2 class="section-title fade-in" data-translate="products-title">Our Collection</h2>
+                <div class="products-grid" id="productsGrid">
+                    <!-- Products will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-info fade-in">
+                        <h2 data-translate="contact-title">Get in Touch</h2>
+                        <p data-translate="contact-subtitle">Ready to own a piece of Indonesian heritage? Contact us for custom orders or inquiries.</p>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p id="contactEmail">heritage.batik@email.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📱</div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p id="contactPhone">+62 812-3456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4 data-translate="contact-location-title">Location</h4>
+                                <p id="contactAddress" data-translate="contact-location">Yogyakarta, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form fade-in" id="contactForm">
+                        <div class="form-group">
+                            <label data-translate="form-name">Name</label>
+                            <input type="text" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="form-email">Email</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-translate="form-message">Message</label>
+                            <textarea name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button" data-translate="form-submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p data-translate="footer">&copy; 2024 Batik Wikarsa. All rights reserved. Made with love in Indonesia.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
