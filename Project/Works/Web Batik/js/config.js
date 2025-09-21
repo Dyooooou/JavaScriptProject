@@ -3,7 +3,7 @@ const CONFIG = {
     // Company Information
     company: {
         name: "Batik Wikarsa",
-        email: "heritage.batik@email.com",
+        email: "@email.com",
         phone: "+62 822 1475 0615",
         address: "Cirebon, Indonesia"
     },
